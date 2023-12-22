@@ -38,9 +38,9 @@
 .r1 img{
     border-radius: 50%;
 }
-.dimg{
+/* .dimg{
     filter: drop-shadow(30px 10px 4px #3a3a3a);
-  }
+  } */
   .card{
     border: 0;
   }

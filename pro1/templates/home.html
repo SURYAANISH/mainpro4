@@ -146,11 +146,10 @@
   <div class="row">
  
     {% for i in result %}
-
       <div class="col-lg-3 col-md-3 col-sm-6">
-        <div class="card my-3" style="width: 100%;">
+        <div class="card " style="width: 100%;">
           <div class="cd1 w-100 text-center">
-            <img src="{{i.img.url}}" class="card-img-top w-75 pt-5 text-center dimg" alt="...">
+            <img src="{{i.img.url}}" class="card-img-top w-100  text-center dimg" alt="...">
           </div>
             <div class="card-body text-center">
               <h5 class="card-title" id="name" name="name">{{i.name}}</h5>
@@ -162,7 +161,6 @@
             </div>
           </div>
     </div>
-    
     {% endfor %}
   </div>
 </div>
@@ -171,6 +169,34 @@
 <div class="container-fluid w-100 m1 mt-5">
   <img class="w-100"  src="../static/images/footage.webp" alt="">
 </div>
+
+
+
+<div class="container">
+  <div class="row">
+ 
+    {% for i in result %}
+      {% if i.brand == "zara" %}
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card " style="width: 100%;">
+          <div class="cd1 w-100 text-center">
+            <img src="{{i.img.url}}" class="card-img-top w-100  text-center dimg" alt="...">
+          </div>
+            <div class="card-body text-center">
+              <h5 class="card-title" id="name" name="name">{{i.name}}</h5>
+              <p class="card-text" name="price">{{i.price}}$</p>
+              <div class=" text-center">
+              <a href="#" class="btn btn-outline-danger px-5">Details</a>
+              </div>
+              <a href=""></a>
+            </div>
+          </div>
+    </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
 
 <div class="container-fluid w-100 m1 mt-5">
   <img class="w-100" src="../static/images/corea.jpg" alt="">
