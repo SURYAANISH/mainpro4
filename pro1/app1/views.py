@@ -15,3 +15,24 @@ def home(request):
     }
     return render(request,'home.html',data)
 
+def card1(request):
+    content=Dress.objects.all()
+    data={
+        'result':content
+    }
+    return render(request,'card1.html',data)
+
+
+def card2(request):
+    content=Dress.objects.all()
+    data={
+        'result':content
+    }
+    return render(request,'card2.html',data)
+
+def card3(request):
+    content=Dress.objects.all()
+    data={
+        'result':content
+    }
+    return render(request,'card3.html',data)
