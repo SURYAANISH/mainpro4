@@ -43,6 +43,7 @@ body{
   width: 100%;
   display: flex;
   position: relative;
+  margin-top: 10px;
 }
 .field:nth-child(2){
   margin-top: 20px;
@@ -131,25 +132,38 @@ button:focus{
    <body>
       <div class="content">
          <div class="text">
-            Login Form
+            signup Form
          </div>
          <form method="POST">
           {% csrf_token %}
             <div class="field">
-               <input type="text" required>
+               <input type="text" name="username" required>
                <span class="fas fa-user"></span>
-               <label type="text" name="username">username </label>
+               <label >Username</label>
             </div>
+
             <div class="field">
-               <input type="password" required>
+              <input type="email" name="email" required>
+              <span class="fas fa-user"></span>
+              <label >Email</label>
+           </div>
+
+            <div class="field">
+               <input type="password" name="pass" required>
                <span class="fas fa-lock"></span>
-               <label type="password" name="pass1">Password</label>
+               <label >Password</label>
             </div>
+
+            <div class="field">
+              <input type="conform password" name="cpass" required>
+              <span class="fas fa-lock"></span>
+              <label >Password</label>
+           </div>
 
             <button type="submit">Sign in</button>
             <div class="sign-up">
-               Not a member?
-               <a href="{% url 'signup' %}">signup now</a>
+               Already have account
+               <a href="{% url 'login' %}">login now</a>
             </div>
          </form>
       </div>

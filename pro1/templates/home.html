@@ -30,8 +30,8 @@
             COMMUNITY
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">womens wear</a></li>
-            <li><a class="dropdown-item" href="#">Men's wear</a></li>
+            <li><a class="dropdown-item" href="{% url 'login' %}">login</a></li>
+            <li><a class="dropdown-item" href="{% url 'signup' %}">signup</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">kids wear</a></li>
           </ul>
@@ -44,6 +44,11 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
+
+      {% if request.user.is_authenticated %}
+      <a class="text-light" href="{% url 'user_logout' %}"><i class="fa-solid fa-right-from-bracket my-2  mx-2 fs-4"></i></a>
+      <h3 class="my-2  mx-2 text-light">{{request.user.username}}</h3>
+      {% endif %}
     </div>
   </div>
 </nav>
@@ -154,7 +159,7 @@
               <h5 class="card-title" id="name" name="name">{{i.name}}</h5>
               <p class="card-text" name="price">{{i.price}}Rs</p>
               <div class=" text-center">
-              <a href="#" class="btn btn-outline-dark px-5">Details</a>
+              <a href="./details.html" class="btn btn-outline-dark px-5">Details</a>
               </div>
               <a href=""></a>
             </div>
