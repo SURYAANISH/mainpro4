@@ -1,157 +1,172 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <!-- <title>Neumorphism Login Form UI | CodingNepal</title> -->
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <style>
-        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  /* user-select: none; */
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-html,body{
-  height: 100%;
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Login page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body{
-  display: grid;
-  place-items: center;
-  background: #dde1e7;
-  text-align: center;
+    background-color: #080710;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
 }
-.content{
-  width: 330px;
-  padding: 40px 30px;
-  background: #dde1e7;
-  border-radius: 10px;
-  box-shadow: -3px -3px 7px #ffffff73,
-               2px 2px 5px rgba(94,104,121,0.288);
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
 }
-.content .text{
-  font-size: 33px;
-  font-weight: 600;
-  margin-bottom: 35px;
-  color: #595959;
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
 }
-.field{
-  height: 50px;
-  width: 100%;
-  display: flex;
-  position: relative;
+/* .shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
 }
-.field:nth-child(2){
-  margin-top: 20px;
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+} */
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
 }
-.field input{
-  height: 100%;
-  width: 100%;
-  padding-left: 45px;
-  outline: none;
-  border: none;
-  font-size: 18px;
-  background: #dde1e7;
-  color: #595959;
-  border-radius: 25px;
-  box-shadow: inset 2px 2px 5px #BABECC,
-              inset -5px -5px 10px #ffffff73;
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
 }
-.field input:focus{
-  box-shadow: inset 1px 1px 2px #BABECC,
-              inset -1px -1px 2px #ffffff73;
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
 }
-.field span{
-  position: absolute;
-  color: #595959;
-  width: 50px;
-  line-height: 50px;
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
 }
-.field label{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 45px;
-  pointer-events: none;
-  color: #666666;
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
 }
-.field input:valid ~ label{
-  opacity: 0;
-}
-.forgot-pass{
-  text-align: left;
-  margin: 10px 0 10px 5px;
-}
-.forgot-pass a{
-  font-size: 16px;
-  color: #3498db;
-  text-decoration: none;
-}
-.forgot-pass:hover a{
-  text-decoration: underline;
+::placeholder{
+    color: #e5e5e5;
 }
 button{
-  margin: 15px 0;
-  width: 100%;
-  height: 50px;
-  font-size: 18px;
-  line-height: 50px;
-  font-weight: 600;
-  background: #dde1e7;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: #595959;
-  box-shadow: 2px 2px 5px #BABECC,
-             -5px -5px 10px #ffffff73;
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
 }
-button:focus{
-  color: #3498db;
-  box-shadow: inset 2px 2px 5px #BABECC,
-             inset -5px -5px 10px #ffffff73;
+button:hover{
+    background-color: rgba(182, 221, 236, 0.952);
 }
-.sign-up{
-  margin: 10px 0;
-  color: #595959;
-  font-size: 16px;
+/* .social{
+  margin-top: 30px;
+  display: flex;
 }
-.sign-up a{
-  color: #3498db;
-  text-decoration: none;
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
 }
-.sign-up a:hover{
-  text-decoration: underline;
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
 }
-      </style>
-   </head>
-   <body>
-      <div class="content">
-         <div class="text">
-            Login Form
-         </div>
-         <form method="POST">
-          {% csrf_token %}
-            <div class="field">
-               <input type="text" required>
-               <span class="fas fa-user"></span>
-               <label type="text" name="username">username </label>
-            </div>
-            <div class="field">
-               <input type="password" required>
-               <span class="fas fa-lock"></span>
-               <label type="password" name="pass1">Password</label>
-            </div>
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+} */
 
-            <button type="submit">Sign in</button>
-            <div class="sign-up">
-               Not a member?
-               <a href="{% url 'signup' %}">signup now</a>
-            </div>
-         </form>
-      </div>
-   </body>
+    </style>
+</head>
+<body>
+
+
+
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="post">
+      {% csrf_token %}
+        <h3>Login</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" id="username" name="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="pwd" name="pass1">
+
+        <button type="submit" >Log In</button>
+
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
 </html>

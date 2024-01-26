@@ -1,218 +1,89 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
 
 
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">SHOP</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            COMMUNITY
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">womens wear</a></li>
-            <li><a class="dropdown-item" href="#">Men's wear</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">kids wear</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">BOOKLOOKS</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-dark" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
 
-<section class="py-5">
-    <div class="container">
-      <div class="row gx-5">
-        <aside class="col-lg-6">
-          <div class="border rounded-4 mb-3 d-flex justify-content-center">
-            <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp">
-              <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-            </a>
-          </div>
-          <div class="d-flex justify-content-center mb-3">
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp" />
-            </a>
-            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" class="item-thumb">
-              <img width="60" height="60" class="rounded-2" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-            </a>
-          </div>
-          <!-- thumbs-wrap.// -->
-          <!-- gallery-wrap .end// -->
-        </aside>
-        <main class="col-lg-6">
-          <div class="ps-lg-3">
-            <h4 class="title text-dark">
-              Quality Men's Hoodie for Winter, Men's Fashion <br />
-              Casual Hoodie
-            </h4>
-            <div class="d-flex flex-row my-3">
-              <div class="text-warning mb-1 me-2">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span class="ms-1">
-                  4.5
-                </span>
-              </div>
-              <span class="text-muted"><i class="fas fa-shopping-basket fa-sm mx-1"></i>154 orders</span>
-              <span class="text-success ms-2">In stock</span>
-            </div>
+
+    <div class="container my-5">
+        <section class="py-5">
+            <div class="container">
+              <div class="row gx-5">
+                <aside class="col-lg-6">
+                  <div class=" justify-content-center">
+
+                      <img  class="w-75 " src="{{data.img.url}}" />
+
+                  </div>
+
+                  <!-- thumbs-wrap.// -->
+                  <!-- gallery-wrap .end// -->
+                </aside>
+                <main class="col-lg-6 mt-5">
+                  <div class="ps-lg-3">
+                    <h4 class="title text-dark">
+                     {{data.name}}
+                    </h4>
+                    <div class="d-flex flex-row my-3">
+                      <div class="text-warning mb-1 me-2">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="ms-1">
+                          4.5
+                        </span>
+                      </div>
+                      <!-- <span class="text-muted"><i class="fas fa-shopping-basket fa-sm mx-1"></i>154 orders</span>
+                      <span class="text-success ms-2">In stock</span> -->
+                    </div>
+          
+                    <div class="mb-3">
+                      <span class="h5">{{data.price}} Rs</span>
+                      <span class="text-muted">/per item</span>
+                    </div>
+          
+                    <p>
+                      Modern look and quality demo item is a streetwear-inspired collection that continues to break away from the conventions of mainstream fashion. Made in Italy, these black and brown clothing low-top shirts for
+                      men.
+                    </p>
+          
+                    <div class="row">
+                      <dt class="col-3">Type:</dt>
+                      <dd class="col-9">{{data.type}}</dd>
+          
+                      <dt class="col-3">Color</dt>
+                      <dd class="col-9">{{data.colour}}</dd>
+          
+                      <dt class="col-3">Material</dt>
+                      <dd class="col-9">{{data.material}}</dd>
+          
+                      <dt class="col-3">Brand</dt>
+                      <dd class="col-9">{{data.brand}}</dd>
+                    </div>
+          
+                    <hr />
+
+                    <a href="" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart </a>
   
-            <div class="mb-3">
-              <span class="h5">$75.00</span>
-              <span class="text-muted">/per box</span>
-            </div>
-  
-            <p>
-              Modern look and quality demo item is a streetwear-inspired collection that continues to break away from the conventions of mainstream fashion. Made in Italy, these black and brown clothing low-top shirts for
-              men.
-            </p>
-  
-            <div class="row">
-              <dt class="col-3">Type:</dt>
-              <dd class="col-9">Regular</dd>
-  
-              <dt class="col-3">Color</dt>
-              <dd class="col-9">Brown</dd>
-  
-              <dt class="col-3">Material</dt>
-              <dd class="col-9">Cotton, Jeans</dd>
-  
-              <dt class="col-3">Brand</dt>
-              <dd class="col-9">Reebook</dd>
-            </div>
-  
-            <hr />
-  
-            <div class="row mb-4">
-              <div class="col-md-4 col-6">
-                <label class="mb-2">Size</label>
-                <select class="form-select border border-secondary" style="height: 35px;">
-                  <option>Small</option>
-                  <option>Medium</option>
-                  <option>Large</option>
-                </select>
-              </div>
-              <!-- col.// -->
-              <div class="col-md-4 col-6 mb-3">
-                <label class="mb-2 d-block">Quantity</label>
-                <div class="input-group mb-3" style="width: 170px;">
-                  <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                  <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
+                  </div>
+                </main>
               </div>
             </div>
-            <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-            <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart </a>
-            <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a>
-          </div>
-        </main>
-      </div>
+          </section>
     </div>
-  </section>
 
 
-
-  <!-- Site footer -->
-<footer class="site-footer mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </div>
-  
-        <div class="col-xs-6 col-md-3">
-          <h6>Categories</h6>
-          <ul class="footer-links">
-            <li><a href="http://scanfcode.com/category/c-language/">MECHANICAL</a></li>
-            <li><a href="http://scanfcode.com/category/front-end-development/">AUTOMATIC</a></li>
-            <li><a href="http://scanfcode.com/category/back-end-development/">QUARTZ</a></li>
-            <li><a href="http://scanfcode.com/category/java-programming-language/">CRONOGRAPH</a></li>
-            <li><a href="http://scanfcode.com/category/android/">SMART</a></li>
-            <li><a href="http://scanfcode.com/category/templates/">DIGITAL</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
-          <ul class="footer-links">
-            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-       <a href="#">Scanfcode</a>.
-          </p>
-        </div>
-  
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <ul class="social-icons">
-            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-     
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    </body>
-  </html>
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
