@@ -59,10 +59,10 @@
               <img src="{{i.img.url}}" class="card-img-top w-100  text-center dimg" alt="...">
             </div>
               <div class="card-body text-center">
-                <h5 class="card-title" id="name" name="name">{{i.name}}</h5>
+                <h5 class="card-title text-truncate" id="name" name="name">{{i.name}}</h5>
                 <p class="card-text" name="price">{{i.price}}Rs</p>
                 <div class=" text-center">
-                <a href="" class="btn btn-outline-dark px-5">Details</a>
+                <a href="{% url 'details' i.pk %}" class="btn btn-outline-dark px-5">Details</a>
                 </div>
                 <a href=""></a>
               </div>
@@ -81,18 +81,18 @@
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
-          <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p class="text-justify">THE FASHION STORE caters to thoughtful shoppers who appreciate unique designs and top quality pieces you just can’t find anywhere else. We are constantly curating fresh new collections and looking for the next big thing our customers will love. Founded in Vienna in 2019, we are proud to be your Online Clothing Shop that you can rely on for our expert service and care.</p>
         </div>
   
         <div class="col-xs-6 col-md-3">
           <h6>Categories</h6>
           <ul class="footer-links">
-            <li><a href="http://scanfcode.com/category/c-language/">MECHANICAL</a></li>
-            <li><a href="http://scanfcode.com/category/front-end-development/">AUTOMATIC</a></li>
-            <li><a href="http://scanfcode.com/category/back-end-development/">QUARTZ</a></li>
-            <li><a href="http://scanfcode.com/category/java-programming-language/">CRONOGRAPH</a></li>
-            <li><a href="http://scanfcode.com/category/android/">SMART</a></li>
-            <li><a href="http://scanfcode.com/category/templates/">DIGITAL</a></li>
+            <li><a href="http://scanfcode.com/category/c-language/">WINTER WEARS</a></li>
+            <li><a href="http://scanfcode.com/category/front-end-development/">GIRLS WEAR></a></li>
+            <li><a href="http://scanfcode.com/category/back-end-development/">FORMALS</a></li>
+            <li><a href="http://scanfcode.com/category/java-programming-language/">WEASTERN WEAR</a></li>
+            <li><a href="http://scanfcode.com/category/android/">CASUAL WEARS</a></li>
+            <li><a href="http://scanfcode.com/category/templates/">TUNICS</a></li>
           </ul>
         </div>
   

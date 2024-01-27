@@ -11,9 +11,9 @@
   <body>
 
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg " style="background-color: rgb(247, 165, 107);">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand fs-3" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,23 +22,22 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">HOME</a>
         </li>
+       
         <li class="nav-item">
-          <a class="nav-link" href="#">SHOP</a>
+          <a class="nav-link fs-" style="color: black;" href="{% url 'about' %}">ABOUT</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            COMMUNITY
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+            ACCOUNT
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{% url 'login' %}">login</a></li>
             <li><a class="dropdown-item" href="{% url 'signup' %}">signup</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">kids wear</a></li>
+           
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">BOOKLOOKS</a>
-        </li>
+        
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -105,24 +104,7 @@
 
  
  
- <div class=" container-fluid my-6 m-auto r">
-   <div class="row text-c">
-     <div class="col-lg-2"> <div class="r1"><img src="../static/images/winter c.jpeg" alt="loading..."><div class="t text-center mt-2">WINTER IS HERE</div></div></div>
-     <div class="col-lg-2"> <div class="r1"><img src="../static/images/AS-D-B-SC-Shirts.jpg" alt="loading..."><div class="t text-center mt-2">kid</div></div></div>
-     <div class="col-lg-2"><div class="r1"><img src="../static/images/couple.jpeg" alt="loading..."><div class="t text-center mt-2 ">PARTY</div></div></div>
-     <div class="col-lg-2"><div class="r1"><img src="../static/images/wedding.jpeg" alt="loading..."><div class="t text-center mt-2 ">WEDDING READY</div></div></div>
-     <div class="col-lg-2"> <div class="r1"><img src="../static/images/vacacy.jpeg" alt="loading..."><div class="t text-center mt-2">VACACY MODE</div></div></div>
-     <div class="col-lg-2"> <div class="r1"><img src="../static/images/AS_Home_Thumb_21_NewArrivals.jpg" alt="loading..."><div class="t text-center mt-2 ">NEW ARRIVALS</div></div>
-      
-       
-       
-      
-      
  
-   </div>
-  
- </div>
- </div>
 
 <div class="text-center my-5 ">
   <h1>TRENDING NOW</h1>
@@ -156,7 +138,7 @@
             <img src="{{i.img.url}}" class="card-img-top w-100  text-center dimg" alt="...">
           </div>
             <div class="card-body text-center">
-              <h5 class="card-title" id="name" name="name">{{i.name}}</h5>
+              <h5 class="card-title text-truncate " id="name" name="name">{{i.name}}</h5>
               <p class="card-text" name="price">{{i.price}}Rs</p>
               <div class=" text-center">
               <a href="{% url 'details' i.pk %}" class="btn btn-outline-dark px-5">Details</a>
@@ -170,11 +152,11 @@
   </div>
 </div>
 
-
+<a href="{% url 'card1' %}">
 <div class="container-fluid w-100 m1 mt-5">
   <img class="w-100"  src="../static/images/footage.webp" alt="">
 </div>
-
+</a>
 
 
 <div class="container mt-5">
@@ -188,10 +170,10 @@
             <img src="{{i.img.url}}" class="card-img-top w-100  text-center dimg" alt="...">
           </div>
             <div class="card-body text-center">
-              <h5 class="card-title" id="name" name="name">{{i.name}}</h5>
+              <h5 class="card-title text-truncate" id="name" name="name">{{i.name}}</h5>
               <p class="card-text" name="price">{{i.price}}Rs</p>
               <div class=" text-center">
-              <a href="#" class="btn btn-outline-dark px-5">Details</a>
+              <a href="{% url 'details' i.pk %}" class="btn btn-outline-dark px-5">Details</a>
               </div>
               <a href=""></a>
             </div>
@@ -203,9 +185,11 @@
 </div>
 
 
-<div class="container-fluid w-100 m1 mt-5">
-  <img class="w-100" src="../static/images/corea.jpg" alt="">
-</div>
+  <div class="container-fluid w-100 m1 mt-5">
+    <img class="w-100" src="../static/images/corea.jpg" alt="">
+  </div>
+
+
 
 
 
@@ -219,18 +203,18 @@
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <h6>About</h6>
-        <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <p class="text-justify">THE FASHION STORE caters to thoughtful shoppers who appreciate unique designs and top quality pieces you just can’t find anywhere else. We are constantly curating fresh new collections and looking for the next big thing our customers will love. Founded in Vienna in 2019, we are proud to be your Online Clothing Shop that you can rely on for our expert service and care.</p>
       </div>
 
       <div class="col-xs-6 col-md-3">
         <h6>Categories</h6>
         <ul class="footer-links">
-          <li><a href="http://scanfcode.com/category/c-language/">MECHANICAL</a></li>
-          <li><a href="http://scanfcode.com/category/front-end-development/">AUTOMATIC</a></li>
-          <li><a href="http://scanfcode.com/category/back-end-development/">QUARTZ</a></li>
-          <li><a href="http://scanfcode.com/category/java-programming-language/">CRONOGRAPH</a></li>
-          <li><a href="http://scanfcode.com/category/android/">SMART</a></li>
-          <li><a href="http://scanfcode.com/category/templates/">DIGITAL</a></li>
+          <li><a href="http://scanfcode.com/category/c-language/">FORMALS</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">GIRLS WEAR</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">WINTER WEARS</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">WEASTERN WEAR</a></li>
+          <li><a href="http://scanfcode.com/category/android/">CASUAL WEARS</a></li>
+          <li><a href="http://scanfcode.com/category/templates/">TUNICS</a></li>
         </ul>
       </div>
 

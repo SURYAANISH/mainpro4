@@ -97,3 +97,5 @@ def details(request,id):
         'data':product
     }
     return render(request,'details.html',data)
+def about(request):
+     return render(request,'about.html')
