@@ -13,7 +13,7 @@
 
 <nav class="navbar navbar-expand-lg " style="background-color: rgb(247, 165, 107);">
   <div class="container-fluid">
-    <a class="navbar-brand fs-3" href="#">Navbar</a>
+    <a class="navbar-brand fs-3" href="#">FASHION LAND</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,15 +39,14 @@
         </li>
         
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-dark" type="submit">Search</button>
-      </form>
+      
 
       {% if request.user.is_authenticated %}
       <a class="text-dark" href="{% url 'user_logout' %}"><i class="fa-solid fa-right-from-bracket my-2  mx-2 fs-4"></i></a>
       <h3 class="my-2  mx-2 text-dark">{{request.user.username}}</h3>
+      <a href="{% url 'view_cart' %}"><i class="fa-solid fa-cart-shopping text-light my-2  me-2 fs-4"></i></a>
       {% endif %}
+      
     </div>
   </div>
 </nav>
@@ -141,7 +140,7 @@
               <h5 class="card-title text-truncate " id="name" name="name">{{i.name}}</h5>
               <p class="card-text" name="price">{{i.price}}Rs</p>
               <div class=" text-center">
-              <a href="{% url 'details' i.pk %}" class="btn btn-outline-dark px-5">Details</a>
+              <a href="{% url 'details' i.pk %}" class="btn btn-outline-warning px-5">Details</a>
               </div>
               <a href=""></a>
             </div>
@@ -173,7 +172,7 @@
               <h5 class="card-title text-truncate" id="name" name="name">{{i.name}}</h5>
               <p class="card-text" name="price">{{i.price}}Rs</p>
               <div class=" text-center">
-              <a href="{% url 'details' i.pk %}" class="btn btn-outline-dark px-5">Details</a>
+              <a href="{% url 'details' i.pk %}" class="btn btn-outline-warning px-5">Details</a>
               </div>
               <a href=""></a>
             </div>
@@ -235,7 +234,7 @@
     <div class="row">
       <div class="col-md-8 col-sm-6 col-xs-12">
         <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-     <a href="#">Scanfcode</a>.
+     <a href="#">FASION LAND Pvt.Ltd</a>.
         </p>
       </div>
 

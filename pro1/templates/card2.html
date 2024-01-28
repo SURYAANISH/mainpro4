@@ -11,9 +11,9 @@
   <body>
 
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg "style="background-color: rgb(247, 165, 107);">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">FASHION LAND</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,27 +23,23 @@
           <a class="nav-link active" aria-current="page" href="#">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SHOP</a>
+          <a class="nav-link fs-" style="color: black;" href="{% url 'about' %}">ABOUT</a>
         </li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            COMMUNITY
+           ACCOUNT
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">womens wear</a></li>
             <li><a class="dropdown-item" href="#">Men's wear</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">kids wear</a></li>
+           
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">BOOKLOOKS</a>
-        </li>
+      
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-dark" type="submit">Search</button>
-      </form>
+      
     </div>
   </div>
 </nav>
@@ -62,7 +58,7 @@
                 <h5 class="card-title text-truncate" id="name" name="name">{{i.name}}</h5>
                 <p class="card-text" name="price">{{i.price}}Rs</p>
                 <div class=" text-center">
-                <a href="{% url 'details' i.pk %}" class="btn btn-outline-dark px-5">Details</a>
+                <a href="{% url 'details' i.pk %}" class="btn btn-outline-warning px-5">Details</a>
                 </div>
                 <a href=""></a>
               </div>
@@ -113,7 +109,7 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
           <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-       <a href="#">Scanfcode</a>.
+       <a href="#">FASION LAND Pvt.Ltd</a>.
           </p>
         </div>
   
